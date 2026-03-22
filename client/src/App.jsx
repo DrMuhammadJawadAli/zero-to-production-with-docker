@@ -25,6 +25,7 @@ function App() {
       <h2>
         Data {message}
       </h2>
+      <h3>Deployed using the CICD Piplines</h3>
     </>
   )
 }

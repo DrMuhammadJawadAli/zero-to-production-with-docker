@@ -23,7 +23,7 @@ app.use(cors({
 
 app.get('/api/message', (req, res) => {
     res.json({
-        message: "Hello from the Jawad server"
+        message: "Hello from the Jawad server with the help of the ci and cd piplines"
     })
 })
 
