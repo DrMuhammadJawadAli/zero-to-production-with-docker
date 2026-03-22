@@ -6,13 +6,12 @@ const app = express()
 app.use(express.json())
 app.use(cors({
     origin: [
-        "http://localhost:5173/",
-        "http://localhost:5174/",
-        "http://localhost:3000/",
-        "http://152.70.129.12:3000/",
-        "http://152.70.129.12:4000/",
-        "http://152.70.129.12:5174/", 
-
+        "http://localhost:5173",
+        "http://localhost:5174",
+        "http://localhost:3000",
+        "http://152.70.129.12:3000",
+        "http://152.70.129.12:4000",
+        "http://152.70.129.12:5174"
         
         // add production url
     ],

@@ -6,11 +6,15 @@ function App() {
 
   useEffect(() => {
 
-    fetch("http://152.70.129.12:4000/api/message")
+    const apiUrl = window.location.hostname === 'localhost' 
+      ? "http://localhost:4000/api/message" 
+      : "http://152.70.129.12:4000/api/message";
+
+    fetch(apiUrl)
       .then((res) => res.json())
       .then((data) => setmessage(data.message))
       .catch((err) => {
-        console.err("Error fetching message", err)
+        console.error("Error fetching message", err)
       })
 
   }, [])
