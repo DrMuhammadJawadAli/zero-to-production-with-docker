@@ -27,6 +27,7 @@ function App() {
       </h2>
       <h3>Deployed using the CICD Piplines</h3>
       <p>This is the new update</p>
+      <button>Click Me</button>
     </>
   )
 }
