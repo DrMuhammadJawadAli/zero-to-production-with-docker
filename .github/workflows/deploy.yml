@@ -19,7 +19,11 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            cd /home/ubuntu/zero_to_production
+            cd /home/ubuntu
+            if [ ! -d "zero_to_production" ]; then
+              git clone https://github.com/DrMuhammadJawadAli/zero-to-production-with-docker.git zero_to_production
+            fi
+            cd zero_to_production
             git pull origin main
             docker compose down
             docker compose up -d --build
